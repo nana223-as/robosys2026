@@ -1,6 +1,7 @@
 # plusコマンド
 ![test](https://github.com/nana223@nana223/robosys2026/actions/workflows/test.yml/badge.svg)
 
+
 標準入力から読み込んだ数字を足す。
 
 （ここに前ページの項目をいろいろ書く）
