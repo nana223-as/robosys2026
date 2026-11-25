@@ -15,10 +15,22 @@ tolerance = {"gray":0.05,"violet":0.1,"blue":0.25,"green":0.5,
 
 for line in sys.stdin:
     color = line.split()
-    a = colors[color[0]]
-    b = colors[color[1]]
-    c = colors[color[2]]
-    e = tolerance[color[3]]
 
-    d = (a*10 + b)* 10**c
-    print(d,e)
+    try:
+        if len(color) !=4:
+           raise ValueError
+
+        a = colors[color[0]]
+        b = colors[color[1]]
+        c = colors[color[2]]
+        e = tolerance[color[3]]
+
+        if a <= 0 or b < 0:
+           raise ValueError
+
+        d = (a*10 + b)* 10**c
+        print(d,e)
+
+    except (KeyError,ValueError):
+        print("Error",file = sys.stderr)
+        sys.exit(1)
