@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 nagomi Shimizu
+# SPDX-License-Identifier: BSD-3-Clause
+
+
+import sys
+
+colors = {"black":0,"brown":1,"red":2,"orange":3,
+          "yellow":4,"green":5,"blue":6,"violet":7,
+          "gray":8,"white":9}
+
+for line in sys.stdin:
+    color = line.strip()
+    print(colors[color])
