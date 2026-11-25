@@ -1,4 +1,4 @@
-# Colorコマンド
+# Resistor_Colorコマンド
 ![test](https://github.com/nana223-as/robosys2026/actions/workflows/test.yml/badge.svg)
 
 抵抗器の4本のカラーコードから抵抗値と許容差を

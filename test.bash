@@ -8,41 +8,41 @@ res=1
  }
 res=0
 ### NORMAL INPUT ###
-out=$(echo "brown black red gold" | ./color)
+out=$(echo "brown black red gold" | ./resistor_color)
 [ "$?" = 0 ] || ng "$LINENO"
 [ "${out}" = "1000 5" ] || ng "$LINENO"
 
-out=$(echo "yellow violet orange silver" | ./color)
+out=$(echo "yellow violet orange silver" | ./resistor_color)
 [ "$?" = 0 ] || ng "$LINENO"
 [ "${out}" = "47000 10" ] || ng "$LINENO"
 
-out=$(echo "brown red gold gold" | ./color)
+out=$(echo "brown red gold gold" | ./resistor_color)
 [ "$?" = 0 ] || ng "$LINENO"
 [ "${out}" = "1.2 5" ] || ng "$LINENO"
 
-out=$(echo "brown red silver gold" | ./color)
+out=$(echo "brown red silver gold" | ./resistor_color)
 [ "$?" = 0 ] || ng "$LINENO"
 [ "${out}" = "0.12 5" ] || ng "$LINENO"
 
 ### STRANGE INPUT ###
 
-out=$(echo "apple black red gold" | ./color)
+out=$(echo "apple black red gold" | ./resistor_color)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo "brown black" | ./color)
+out=$(echo "brown black" | ./resistor_color)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo "gold black red gold" | ./color)
+out=$(echo "gold black red gold" | ./resistor_color)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo | ./color)
+out=$(echo | ./resistor_color)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(./color < /dev/null)
+out=$(./resistor_color < /dev/null)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
