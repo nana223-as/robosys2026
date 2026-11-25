@@ -12,8 +12,10 @@ colors = {"gold":-1,"silver":-2,"black":0,"brown":1,
 tolerance = {"gray":0.05,"violet":0.1,"blue":0.25,"green":0.5,
              "brown":1,"red":2,"gold":5,"silver":10}
 
+count = 0
 
 for line in sys.stdin:
+    count += 1
     color = line.split()
 
     try:
@@ -28,9 +30,13 @@ for line in sys.stdin:
         if a <= 0 or b < 0:
            raise ValueError
 
-        d = (a*10 + b)* 10**c
+        d = round((a*10 + b)* 10**c,2)
         print(d,e)
 
     except (KeyError,ValueError):
+        print("Error",file=sys.stderr)
+        sys.exit(1)
+
+if count == 0:
         print("Error",file = sys.stderr)
         sys.exit(1)
