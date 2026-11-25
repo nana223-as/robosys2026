@@ -10,5 +10,11 @@ colors = {"black":0,"brown":1,"red":2,"orange":3,
           "gray":8,"white":9}
 
 for line in sys.stdin:
-    color = line.strip()
-    print(colors[color])
+    color = line.split()
+
+    a = colors[color[0]]
+    b = colors[color[1]]
+    c = colors[color[2]]
+
+    d = (a*10 + b)* 10**c
+    print(d)
