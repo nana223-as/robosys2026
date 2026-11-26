@@ -37,8 +37,5 @@ $ echo "brown black red gold" | ./color
 - Ubuntu（ubuntu-latest）
 
 ## ライセンス
-- このソフトウェアはBSD-3-Clauseライセンスの
-  もとで公開されています。
+- このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
 - © 2026 Nagomi Shimizu
-
-
