@@ -8,7 +8,7 @@
 色を英語で入力し、空白で区切ります。
 
 ```
-$ echo "brown black red gold" | ./color
+$ echo "brown black red gold" | ./resistor_color
 1000 5
 ```
 
